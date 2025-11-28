@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick Pay Now - الحل الأسرع للدفع بالدولار في مصر | شرح RedotPay</title>
     <meta name="description" content="Quick Pay Now (الدفع السريع الآن) هو دليلك لاستخراج فيزا RedotPay وشحنها عن طريق فودافون كاش. حل مشاكل الدفع الدولي في مصر والدول العربية واحصل على 5$ هدية." />
-    <meta name="keywords" content="RedotPay, دفع بالدولار, فيزا دولية, فودافون كاش, USDT, بطاقة ائتمان افتراضية, مصر, Quick Pay Now" />
+    <meta name="keywords" content="ازاي ادفع بالدولار من مصر, ازاي ادفع اونلاين بالدولار, فيزا دولارية في مصر, حل مشكلة الدفع الدولي, RedotPay شرح, شحن RedotPay فودافون كاش, دفع اعلانات فيسبوك بالدولار من مصر, فيزا مشتريات دولية, بديل الكريدت كارد في مصر, الدفع بالدولار فودافون كاش, ازاي اشتري بالدولار من مصر 2026, فيزا دفع دولي بدون حساب بنكي" />
     
     <!-- Google Fonts: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,13 @@
               primary: {
                 50: '#fef2f2',
                 100: '#fee2e2',
+                200: '#fecaca',
+                300: '#fca5a5',
+                400: '#f87171',
                 500: '#ef4444',
                 600: '#dc2626',
                 700: '#b91c1c',
+                800: '#991b1b',
                 900: '#7f1d1d',
               }
             }
@@ -50,19 +54,30 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-[100] bg-gray-900 flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative">
+            <!-- Zap Icon with lightning animation -->
+            <svg class="h-32 w-32 text-yellow-400 zap-animation relative z-10 filter drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+        </div>
+        <h2 class="mt-8 text-3xl font-black text-white tracking-wider animate-pulse uppercase">Quick Pay Now</h2>
+    </div>
+
     <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
                         <div class="bg-primary-600 p-2 rounded-lg">
                             <!-- Zap Icon -->
                             <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                         </div>
                         <span class="font-bold text-2xl text-gray-900 tracking-tight">Quick<span class="text-primary-600">Pay</span> Now</span>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Desktop Menu -->
@@ -110,12 +125,12 @@
             <div class="lg:w-1/2 text-center lg:text-right z-10">
                 <div class="inline-flex items-center gap-2 bg-primary-900/50 border border-primary-700/50 rounded-full px-4 py-1.5 mb-6">
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                    <span class="text-sm font-medium text-primary-100">الحل الموثوق في مصر 2024</span>
+                    <span class="text-sm font-medium text-primary-100">الحل الموثوق في مصر 2026</span>
                 </div>
                 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
                     تخلص من قيود الدفع <br />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-red-600">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-300">
                         واشترِ بالدولار بحرية
                     </span>
                 </h1>
@@ -143,7 +158,7 @@
                     </div>
                     <div class="flex items-center gap-1">
                         <!-- Globe Icon -->
-                        <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
                         <span>دعم عالمي</span>
                     </div>
                 </div>
@@ -348,31 +363,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Blog Modal -->
-    <div id="blog-modal" class="fixed inset-0 z-[60] overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" onclick="closeModal()"></div>
-            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-            <div class="inline-block align-bottom bg-white rounded-2xl text-right overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
-                <div class="relative h-64">
-                    <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
-                    <button onclick="closeModal()" class="absolute top-4 left-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                    </button>
-                </div>
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <h3 id="modal-title" class="text-2xl font-bold text-gray-900 mb-4"></h3>
-                    <div id="modal-content" class="prose prose-red max-w-none text-gray-600 whitespace-pre-line leading-relaxed"></div>
-                </div>
-                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button type="button" class="w-full inline-flex justify-center rounded-lg border border-transparent shadow-sm px-4 py-2 bg-primary-600 text-base font-medium text-white hover:bg-primary-700 focus:outline-none sm:mr-3 sm:w-auto sm:text-sm" onclick="closeModal()">
-                        إغلاق
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-white">
