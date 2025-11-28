@@ -3,20 +3,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadingScreen = document.getElementById('loading-screen');
   const zapIcon = document.querySelector('.zap-animation');
   
+  // Function to handle hiding the screen
+  const hideLoadingScreen = () => {
+    if (!loadingScreen) return;
+    
+    // Minimum display time to show the cool animation (1.5 seconds)
+    setTimeout(() => {
+      loadingScreen.classList.add('opacity-0');
+      // Wait for the fade-out transition (500ms) then remove from DOM
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }, 1500);
+  };
+
   if (loadingScreen) {
-    // Add lightning animation class on load
+    // Start animation immediately
     if(zapIcon) {
+        // Reset animation to ensure it plays
+        zapIcon.style.animation = 'none';
+        zapIcon.offsetHeight; /* trigger reflow */
+        zapIcon.style.animation = null; 
         zapIcon.classList.add('animate-lightning');
     }
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        loadingScreen.classList.add('opacity-0');
-        setTimeout(() => {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 1200); // Increased slightly to show the full lightning effect
-    });
+    // Check if window is already loaded
+    if (document.readyState === 'complete') {
+      hideLoadingScreen();
+    } else {
+      window.addEventListener('load', hideLoadingScreen);
+      // Fallback: Force hide after 4 seconds max in case load event hangs
+      setTimeout(hideLoadingScreen, 4000);
+    }
   }
 
   // --- Dynamic Year ---
@@ -151,7 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (blogContentContainer) {
     // We are on blog-post.html
     const urlParams = new URLSearchParams(window.location.search);
-    const postId = parseInt(urlParams.get('id'));
+    const idParam = urlParams.get('id');
+    const postId = idParam ? parseInt(idParam) : null;
     const post = blogPosts.find(p => p.id === postId);
 
     if (post) {
