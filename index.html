@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Pay Now - الحل الأسرع للدفع بالدولار في مصر | شرح RedotPay</title>
+    <meta name="description" content="Quick Pay Now (الدفع السريع الآن) هو دليلك لاستخراج فيزا RedotPay وشحنها عن طريق فودافون كاش. حل مشاكل الدفع الدولي في مصر والدول العربية واحصل على 5$ هدية." />
+    <meta name="keywords" content="RedotPay, دفع بالدولار, فيزا دولية, فودافون كاش, USDT, بطاقة ائتمان افتراضية, مصر, Quick Pay Now" />
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#fef2f2',
+                100: '#fee2e2',
+                500: '#ef4444',
+                600: '#dc2626',
+                700: '#b91c1c',
+                900: '#7f1d1d',
+              }
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <div class="bg-primary-600 p-2 rounded-lg">
+                            <!-- Zap Icon -->
+                            <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <span class="font-bold text-2xl text-gray-900 tracking-tight">Quick<span class="text-primary-600">Pay</span> Now</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="#how-it-works" class="text-gray-600 hover:text-primary-600 font-medium transition">كيف يعمل؟</a>
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 font-medium transition">المميزات</a>
+                    <a href="#blog" class="text-gray-600 hover:text-primary-600 font-medium transition">المدونة</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary-600 font-medium transition">الأسئلة الشائعة</a>
+                    <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="bg-primary-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        سجل واحصل على 5$
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <!-- Menu Icon -->
+                        <svg id="menu-icon" class="h-6 w-6 block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                        <!-- X Icon -->
+                        <svg id="close-icon" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="#how-it-works" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">كيف يعمل؟</a>
+                <a href="#features" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">المميزات</a>
+                <a href="#blog" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">المدونة</a>
+                <a href="#faq" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">الأسئلة الشائعة</a>
+                <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="block w-full text-center mt-4 px-5 py-3 rounded-lg font-bold text-white bg-primary-600 hover:bg-primary-700">
+                    سجل الآن (هدية 5$)
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 text-white pb-16 pt-10 sm:pb-24 lg:pb-32">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+            
+            <!-- Text Content -->
+            <div class="lg:w-1/2 text-center lg:text-right z-10">
+                <div class="inline-flex items-center gap-2 bg-primary-900/50 border border-primary-700/50 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span class="text-sm font-medium text-primary-100">الحل الموثوق في مصر 2024</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    تخلص من قيود الدفع <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-red-600">
+                        واشترِ بالدولار بحرية
+                    </span>
+                </h1>
+                
+                <p class="mt-4 max-w-2xl mx-auto lg:mx-0 text-xl text-gray-300 leading-relaxed">
+                    بطاقة RedotPay تمنحك الحرية المالية. اشحن حسابك عبر فودافون كاش أو العملات الرقمية، واحصل على بطاقة فيزا افتراضية مقبولة عالمياً وصالحة لمدة 3 سنوات.
+                </p>
+                
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-primary-600 rounded-xl font-bold text-lg shadow-lg shadow-primary-900/50 hover:bg-primary-500 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <!-- Credit Card Icon -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                        احصل على بطاقتك الآن
+                    </a>
+                    <div class="px-8 py-4 bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl font-medium text-lg text-gray-200 flex items-center justify-center gap-2">
+                        <span class="text-green-400 font-bold">+5$</span> هدية تسجيل
+                    </div>
+                </div>
+
+                <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-400">
+                    <div class="flex items-center gap-1">
+                        <!-- Shield Check Icon -->
+                        <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                        <span>آمن وموثوق</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <!-- Globe Icon -->
+                        <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <span>دعم عالمي</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <div class="absolute inset-0 bg-primary-600 blur-[100px] opacity-20 rounded-full"></div>
+                <div class="relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-2xl transform rotate-[-2deg] hover:rotate-0 transition duration-500">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="text-xl font-bold italic">RedotPay</span>
+                        <span class="text-sm bg-gray-700 px-2 py-1 rounded">Virtual</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-12">
+                         <div class="w-12 h-8 bg-yellow-500/20 rounded md:w-16 md:h-10"></div>
+                         <div class="h-4 w-24 bg-gray-700 rounded animate-pulse"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-gray-400 text-sm">
+                            <span>CARD HOLDER</span>
+                            <span>EXPIRES</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-mono tracking-widest">YOUR NAME</span>
+                            <span class="text-lg font-mono">12/28</span>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <!-- Visa Logo placeholder -->
+                         <div class="h-6 w-12 bg-white opacity-80 rounded flex items-center justify-center font-bold text-blue-900 text-xs italic">VISA</div>
+                    </div>
+                </div>
+                
+                <!-- Floating Element -->
+                <div class="absolute -bottom-6 -right-6 bg-white text-gray-900 p-4 rounded-xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-100 p-2 rounded-full">
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">تم الشحن بنجاح</p>
+                            <p class="font-bold text-sm">Vodafone Cash -> USDT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Steps Section -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    كيف تبدأ في 3 خطوات بسيطة؟
+                </h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    الطريقة الأسهل لامتلاك حساب بنكي دولي وأنت في مكانك
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connector Line for Desktop -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition relative group">
+                    <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-600 transition duration-300">
+                        <!-- Download Icon -->
+                        <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">1. حمل التطبيق وسجل</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        قم بتحميل تطبيق RedotPay من الرابط أدناه. استخدم كود الإحالة للحصول على <span class="font-bold text-green-600">5 دولار</span> هدية ترحيبية فوراً.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noreferrer" class="text-primary-600 font-bold hover:underline inline-flex items-center">
+                            سجل الآن 
+                            <!-- Arrow Left Icon -->
+                            <svg class="mr-2 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition relative group">
+                    <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-600 transition duration-300">
+                        <!-- Smartphone Icon -->
+                        <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">2. اشحن رصيدك</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        اشحن محفظتك بـ USDT عبر سوق P2P داخل التطبيق أو عبر Binance. يمكنك الدفع بالعملة المحلية باستخدام <span class="font-bold text-primary-700">فودافون كاش</span> أو إنستا باي.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition relative group">
+                    <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-600 transition duration-300">
+                        <!-- Shopping Cart Icon -->
+                        <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">3. ادفع بحرية</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        فعّل بطاقتك الافتراضية واحصل على بياناتها فوراً. استخدمها للدفع في أمازون، فيسبوك، جوجل، أو أي مكان يقبل فيزا وماستركارد.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-extrabold mb-6">
+                        لماذا RedotPay هي الخيار الأفضل؟
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        على عكس البطاقات البنكية التي تفرض قيوداً صارمة، تقدم لك RedotPay حرية مالية كاملة. لا حاجة لزيارة البنك، لا حاجة لإثبات دخل، ولا مصاريف خفية.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Feature 1 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="mr-4">
+                                <h4 class="text-lg font-bold text-white">قبول عالمي</h4>
+                                <p class="mt-1 text-gray-400">البطاقة تعمل في جميع المواقع العالمية (Netflix, Amazon, PayPal, Google Ads) بدون رفض.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="mr-4">
+                                <h4 class="text-lg font-bold text-white">شحن محلي سهل</h4>
+                                <p class="mt-1 text-gray-400">اشحن رصيدك باستخدام فودافون كاش، إنستا باي، أو أي محفظة محلية عبر سوق P2P.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="mr-4">
+                                <h4 class="text-lg font-bold text-white">صلاحية طويلة</h4>
+                                <p class="mt-1 text-gray-400">بطاقة ائتمان افتراضية صالحة لمدة 3 سنوات كاملة، قابلة لإعادة الشحن في أي وقت.</p>
+                            </div>
+                        </div>
+                         <!-- Feature 4 -->
+                         <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="mr-4">
+                                <h4 class="text-lg font-bold text-white">هدية تسجيل</h4>
+                                <p class="mt-1 text-gray-400">احصل على رصيد 5$ مجاناً فور التسجيل من الرابط وتفعيل حسابك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 rounded-3xl p-8 border border-gray-700 shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-600/10 to-transparent"></div>
+                        <div class="relative z-10 text-center">
+                            <h3 class="text-2xl font-bold mb-6">جاهز للبدء؟</h3>
+                            <div class="bg-white/5 p-4 rounded-xl mb-6 backdrop-blur-sm border border-white/10">
+                                <p class="text-3xl font-mono text-primary-400 tracking-wider">0000 0000 0000 0000</p>
+                            </div>
+                            <p class="text-gray-400 mb-8">انضم لأكثر من مليون مستخدم يدفعون بحرية حول العالم</p>
+                            <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noreferrer" class="inline-block w-full bg-primary-600 hover:bg-primary-500 text-white font-bold py-4 rounded-xl transition shadow-lg">
+                                افتح حسابك الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">
+                    أحدث المقالات والشروحات
+                </h2>
+                <p class="mt-4 text-gray-600">
+                    كل ما تحتاج معرفته عن استخدام RedotPay والدفع الإلكتروني
+                </p>
+            </div>
+
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog posts will be inserted here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="fixed inset-0 z-[60] overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" onclick="closeModal()"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-2xl text-right overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+                <div class="relative h-64">
+                    <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
+                    <button onclick="closeModal()" class="absolute top-4 left-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-900 mb-4"></h3>
+                    <div id="modal-content" class="prose prose-red max-w-none text-gray-600 whitespace-pre-line leading-relaxed"></div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" class="w-full inline-flex justify-center rounded-lg border border-transparent shadow-sm px-4 py-2 bg-primary-600 text-base font-medium text-white hover:bg-primary-700 focus:outline-none sm:mr-3 sm:w-auto sm:text-sm" onclick="closeModal()">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex justify-center mb-4">
+            <div class="p-3 bg-primary-50 rounded-full">
+                <svg class="w-8 h-8 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+          </div>
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            الأسئلة الشائعة
+          </h2>
+          <p className="mt-4 text-xl text-gray-500">
+            إجابات سريعة على كل ما يدور في ذهنك
+          </p>
+        </div>
+
+        <div class="space-y-4" id="faq-container">
+           <!-- FAQ Items inserted here -->
+           <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 bg-white hover:border-gray-300">
+              <button class="w-full px-6 py-5 text-right flex justify-between items-center focus:outline-none faq-btn">
+                <span class="font-bold text-lg text-gray-900">كيف أقوم بالتسجيل في تطبيق RedotPay؟</span>
+                <span class="mr-4 transition-transform duration-300">
+                   <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer px-6 text-gray-600 leading-relaxed border-t border-transparent pt-0">
+                <div class="py-4">
+                  الأمر سهل للغاية! اضغط على رابط 'سجل واحصل على 5$' في هذا الموقع، حمل التطبيق على هاتفك، ثم أنشئ حساباً باستخدام رقم هاتفك أو بريدك الإلكتروني. ستحتاج بعدها لتوثيق هويتك باستخدام بطاقة الرقم القومي أو جواز السفر لتفعيل الحساب بالكامل.
+                </div>
+              </div>
+           </div>
+
+           <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 bg-white hover:border-gray-300">
+              <button class="w-full px-6 py-5 text-right flex justify-between items-center focus:outline-none faq-btn">
+                <span class="font-bold text-lg text-gray-900">كيف يمكنني شحن البطاقة بالدولار (USDT)؟</span>
+                <span class="mr-4 transition-transform duration-300">
+                   <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer px-6 text-gray-600 leading-relaxed border-t border-transparent pt-0">
+                 <div class="py-4">
+                  يمكنك شحن رصيدك بسهولة من خلال سوق P2P المدمج في التطبيق أو عبر منصة مثل Binance. يمكنك شراء عملة USDT الرقمية والدفع بالجنيه المصري عبر فودافون كاش، إنستا باي، أو التحويل البنكي، ثم تحويل الـ USDT إلى محفظتك في RedotPay.
+                 </div>
+              </div>
+           </div>
+
+           <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 bg-white hover:border-gray-300">
+              <button class="w-full px-6 py-5 text-right flex justify-between items-center focus:outline-none faq-btn">
+                <span class="font-bold text-lg text-gray-900">كيف أحصل على بطاقة الفيزا الافتراضية؟</span>
+                <span class="mr-4 transition-transform duration-300">
+                   <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer px-6 text-gray-600 leading-relaxed border-t border-transparent pt-0">
+                 <div class="py-4">
+                  بعد شحن حسابك بمبلغ كافٍ (حوالي 10 دولارات)، اذهب إلى قسم 'Cards' في التطبيق واضغط على طلب بطاقة افتراضية (Virtual Card). سيتم خصم رسوم الإصدار وستظهر بيانات البطاقة فوراً لتستخدمها في التسوق.
+                 </div>
+              </div>
+           </div>
+
+           <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 bg-white hover:border-gray-300">
+              <button class="w-full px-6 py-5 text-right flex justify-between items-center focus:outline-none faq-btn">
+                <span class="font-bold text-lg text-gray-900">ما هي مدة صلاحية البطاقة وهل يمكن شحنها مجدداً؟</span>
+                <span class="mr-4 transition-transform duration-300">
+                   <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer px-6 text-gray-600 leading-relaxed border-t border-transparent pt-0">
+                 <div class="py-4">
+                  البطاقة الافتراضية صالحة لمدة 3 سنوات كاملة. نعم، البطاقة قابلة لإعادة الشحن في أي وقت؛ كل ما عليك هو إضافة رصيد USDT إلى محفظتك في التطبيق وسيتم الخصم منه تلقائياً عند استخدام البطاقة.
+                 </div>
+              </div>
+           </div>
+
+           <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 bg-white hover:border-gray-300">
+              <button class="w-full px-6 py-5 text-right flex justify-between items-center focus:outline-none faq-btn">
+                <span class="font-bold text-lg text-gray-900">كيف أحصل على هدية الـ 5 دولار؟</span>
+                <span class="mr-4 transition-transform duration-300">
+                   <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer px-6 text-gray-600 leading-relaxed border-t border-transparent pt-0">
+                 <div class="py-4">
+                  للحصول على الهدية، يجب عليك التسجيل حصرياً من خلال رابط الإحالة الموجود في موقعنا. بعد التسجيل وإتمام عملية التحقق من الهوية (KYC)، سيتم إضافة رصيد 5 دولار إلى حسابك كبونص ترحيبي.
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 border-t border-gray-200 pb-24 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-right">
+                <span class="font-bold text-xl text-gray-900">Quick<span class="text-primary-600">Pay</span> Now</span>
+                <p class="text-sm text-gray-500 mt-2">دليلك الأول للدفع الإلكتروني في العالم العربي</p>
+            </div>
+            <div class="text-sm text-gray-500 text-center md:text-left">
+                &copy; <span id="year"></span> جميع الحقوق محفوظة. موقع Quick Pay Now (الدفع السريع الآن).
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Footer -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] z-40 md:hidden">
+        <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-primary-600 text-white font-bold text-lg py-3 rounded-xl shadow-lg hover:bg-primary-700 transition active:scale-95">
+            <span>ادفع بالدولار الآن</span>
+            <!-- Arrow Right -->
+            <svg class="mr-2 w-5 h-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+    </div>
+
+    <!-- Application Script -->
+    <script src="script.js"></script>
+</body>
+</html>
