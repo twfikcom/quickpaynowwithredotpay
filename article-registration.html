@@ -3,16 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ازاي تعمل حساب على RedotPay وتفعله في 5 دقايق (خطوة بخطوة)</title>
-    <meta name="description" content="شرح بالصور والخطوات طريقة التسجيل في تطبيق RedotPay وتفعيل الهوية للحصول على 5 دولار هدية وشراء فيزا دولية." />
-    <meta name="keywords" content="تسجيل RedotPay, تفعيل RedotPay, انشاء حساب ريدوت باي, بونص 5 دولار RedotPay, شرح RedotPay" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="ازاي تعمل حساب على RedotPay وتفعله في 5 دقايق (خطوة بخطوة)" />
-    <meta property="og:description" content="شرح التسجيل وتفعيل الحساب للحصول على 5 دولار هدية." />
-    <meta property="og:image" content="https://placehold.co/800x450/b91c1c/ffffff?text=%D8%A7%D8%B2%D8%A7%D9%8A+%D8%A7%D8%AF%D9%81%D8%B9+%D8%A8%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A7%D8%B1+%D9%81%D9%8A+%D9%85%D8%B5%D8%B1&font=roboto" />
-
+    <title>طريقة طلب خدمة الدفع خطوة بخطوة - Quick Pay Now</title>
+    <meta name="description" content="كيف تطلب خدمة الدفع بالدولار؟ تواصل واتساب، حول فودافون كاش، واستلم خدمتك." />
+    
     <!-- Google Fonts: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,37 +38,7 @@
               }
             },
             typography: (theme) => ({
-              DEFAULT: {
-                css: {
-                  color: theme('colors.gray.700'),
-                  h3: {
-                    color: theme('colors.gray.900'),
-                    fontWeight: '800',
-                    fontSize: '1.5rem',
-                    marginTop: '2rem',
-                    marginBottom: '1rem',
-                  },
-                  p: {
-                    marginBottom: '1.25rem',
-                    lineHeight: '1.75',
-                  },
-                  ul: {
-                    marginBottom: '1.25rem',
-                    paddingRight: '1.5rem',
-                    listStyleType: 'disc',
-                  },
-                  li: {
-                    marginBottom: '0.5rem',
-                  },
-                  a: {
-                    color: theme('colors.primary.600'),
-                    textDecoration: 'underline',
-                    '&:hover': {
-                      color: theme('colors.primary.700'),
-                    },
-                  },
-                },
-              },
+                DEFAULT: { css: { color: theme('colors.gray.700'), h3: { color: theme('colors.gray.900'), fontWeight: '800', marginTop: '2rem' }, a: { color: theme('colors.primary.600') } } }
             }),
           }
         }
@@ -83,40 +46,22 @@
     </script>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
-    <!-- Navbar (Same as previous) -->
+    <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-                        <div class="bg-primary-600 p-2 rounded-lg">
+                         <div class="bg-primary-600 p-2 rounded-lg">
                             <svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                         </div>
                         <span class="font-bold text-2xl text-gray-900 tracking-tight">Quick<span class="text-primary-600">Pay</span> Now</span>
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                 <div class="hidden md:flex items-center space-x-8 space-x-reverse">
                     <a href="index.html" class="text-gray-600 hover:text-primary-600 font-medium transition">الرئيسية</a>
-                    <a href="index.html#blog" class="text-gray-600 hover:text-primary-600 font-medium transition">مقالات أخرى</a>
-                    <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="bg-primary-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                        سجل واحصل على 5$
-                    </a>
+                     <a href="https://wa.me/201000000000" target="_blank" class="bg-green-500 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-600 transition shadow-lg">تواصل معنا واتساب</a>
                 </div>
-                <div class="flex items-center md:hidden">
-                     <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
-                        <svg id="menu-icon" class="h-6 w-6 block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                        <svg id="close-icon" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="index.html" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">الرئيسية</a>
-                <a href="index.html#blog" class="block w-full text-right px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 mobile-link">مقالات أخرى</a>
-                <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="block w-full text-center mt-4 px-5 py-3 rounded-lg font-bold text-white bg-primary-600 hover:bg-primary-700">
-                    سجل الآن (هدية 5$)
-                </a>
             </div>
         </div>
     </nav>
@@ -125,81 +70,50 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-8 text-center md:text-right">
                 <a href="index.html#blog" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium mb-4 transition">
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     العودة للمقالات
                 </a>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">ازاي تعمل حساب على RedotPay وتفعله في 5 دقايق</h1>
-                <div class="flex items-center justify-center md:justify-start text-gray-500 text-sm">
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    2025-11-15
-                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">طريقة طلب خدمة الدفع خطوة بخطوة</h1>
+                <div class="text-gray-500 text-sm">2026-01-10</div>
             </div>
             
             <div class="rounded-2xl overflow-hidden shadow-lg mb-10">
-                <img src="https://placehold.co/800x450/b91c1c/ffffff?text=%D8%A7%D8%B2%D8%A7%D9%8A+%D8%A7%D8%AF%D9%81%D8%B9+%D8%A8%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A7%D8%B1+%D9%81%D9%8A+%D9%85%D8%B5%D8%B1&font=roboto" alt="التسجيل في RedotPay" class="w-full h-auto object-cover">
+                <img src="https://placehold.co/800x450/16a34a/ffffff?text=%D8%AE%D8%B7%D9%88%D8%A7%D8%AA+%D8%B7%D9%84%D8%A8+%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9&font=roboto" alt="خطوات طلب الخدمة" class="w-full h-auto object-cover">
             </div>
 
             <article class="prose prose-lg prose-red max-w-none text-gray-700 leading-loose">
-                <p class="lead text-xl text-gray-600 mb-8">لو بتواجه مشكلة إن كارت البنك بتاعك مش شغال دولي، أو عايز تشتري حاجة من أمازون، تدفع اشتراك نتفليكس، أو حتى تعمل إعلانات ممولة على فيسبوك، فالحل السحري دلوقتي هو <strong>RedotPay</strong>.</p>
+                <p class="lead text-xl text-gray-600 mb-8">عشان نسهل عليك، عملنا نظام طلب بسيط جداً عن طريق الواتساب. مش محتاج تسجل في موقع ولا تملى بيانات كتير.</p>
         
-                <p>في المقالة دي هقولك ازاي تعمل حساب وتفعله في خطوات بسيطة جداً، وكل ده وأنت في مكانك بالموبايل.</p>
-
-                <h3>1. تحميل التطبيق والتسجيل</h3>
-                <p>أول خطوة هي إنك تحمل التطبيق. عشان تاخد <strong>5 دولار هدية</strong> في رصيدك، لازم تسجل من رابط دعوة. اضغط على اللينك ده <a href="https://url.hk/i/en/42ngi" target="_blank" class="text-primary-600 font-bold">سجل الآن</a>.</p>
-                <p>بعد ما تفتح اللينك، اكتب رقم تليفونك أو الإيميل بتاعك، واضغط على "Get Code". هيجيلك كود تفعيل، اكتبه وكده أنت سجلت مبدئياً.</p>
-
-                <h3>2. توثيق الحساب (KYC)</h3>
-                <p>عشان تطلع فيزا وتستخدمها، لازم التطبيق يتأكد إنك شخص حقيقي. دي إجراءات بنكية عادية جداً وأمان ليك.</p>
+                <h3>1. جهز طلبك</h3>
+                <p>قبل ما تكلمنا، جهز تفاصيل الحاجة اللي عايز تشتريها. مثلاً:</p>
                 <ul>
-                    <li>افتح التطبيق وادخل على الإعدادات أو اضغط على لافتة التوثيق.</li>
-                    <li>اختار وثيقة الهوية (البطاقة الشخصية أو الباسبور).</li>
-                    <li>صور البطاقة وش وضهر في إضاءة كويسة.</li>
-                    <li>التطبيق هيطلب منك سيلفي سريع للتأكد من هويتك.</li>
+                    <li>رابط المنتج (لو هتشتري من موقع).</li>
+                    <li>أو بيانات الدخول (لو عايزنا ندفع اشتراك من جوه حسابك زي Netlfix).</li>
+                    <li>أو قيمة المبلغ المطلوب دفعه (لو إعلانات).</li>
                 </ul>
-                <p>التوثيق بيتقبل في ثواني بفضل الذكاء الاصطناعي.</p>
 
-                <h3>3. مبروك عليك الحساب والهدية</h3>
-                <p>دلوقتي هتلاقي في رصيدك 5 دولار (مقفولين مؤقتاً لحد ما تطلع الكارت). عشان تطلع الكارت الـ Virtual وتستخدمه، لازم تشحن الحساب بحوالي 10 دولار.</p>
-                
-                <p>في المقالة الجاية، هشرحلك بالتفصيل <strong>ازاي تشحن حسابك عن طريق فودافون كاش</strong> من غير ما تحتاج حد وسيط.</p>
+                <h3>2. تواصل معنا واتساب</h3>
+                <p>اضغط على زر الواتساب في الموقع وابعتلنا رسالة فيها: "محتاج أدفع مبلغ كذا لموقع كذا".</p>
 
-                <div class="bg-gray-100 p-6 rounded-lg mt-8 border-r-4 border-primary-600">
-                    <strong>نصيحة مهمة:</strong> بيانات الفيزا اللي هتطلعلك سرية جداً، متشاركش الأرقام مع حد، واستخدمها بس في المواقع الموثوقة.
+                <h3>3. تأكيد التكلفة والدفع</h3>
+                <p>خدمة العملاء هترد عليك فوراً بسعر الدولار اليوم + العمولة (7%). وهنبعتلك رقم فودافون كاش أو حساب انستا باي للتحويل.</p>
+
+                <h3>4. التنفيذ والاستلام</h3>
+                <p>بمجرد ما تحول المبلغ وتبعت سكرين شوت، بنقوم بتنفيذ عملية الدفع في خلال 10 - 30 دقيقة بالكتير، وبنبعتلك إيصال الدفع (Receipt) عشان تتأكد إن كل حاجة تمام.</p>
+
+                <div class="bg-gray-100 p-6 rounded-lg mt-8 border-r-4 border-green-500">
+                    <strong>ضمان الخدمة:</strong> لو عملية الدفع فشلت لأي سبب تقني من ناحيتنا، بنرجعلك فلوسك كاملة فوراً على فودافون كاش.
                 </div>
             </article>
 
-            <div class="mt-12 p-8 bg-primary-50 rounded-2xl text-center border border-primary-100">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">جاهز تسجل؟</h3>
-                <p class="text-gray-600 mb-6">الحق العرض دلوقتي وخد 5 دولار رصيد.</p>
-                <a href="https://url.hk/i/en/42ngi" target="_blank" class="inline-block bg-primary-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    سجل الآن
+            <div class="mt-12 p-8 bg-gray-50 rounded-2xl text-center border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">جاهز تطلب؟</h3>
+                <a href="https://wa.me/201000000000" target="_blank" class="inline-block bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition shadow-lg">
+                    ابعت طلبك دلوقتي
                 </a>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-12 border-t border-gray-200 pb-24 md:pb-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0 text-center md:text-right">
-                <span class="font-bold text-xl text-gray-900">Quick<span class="text-primary-600">Pay</span> Now</span>
-                <p class="text-sm text-gray-500 mt-2">دليلك الأول للدفع الإلكتروني في العالم العربي</p>
-            </div>
-            <div class="text-sm text-gray-500 text-center md:text-left">
-                &copy; <span id="year"></span> جميع الحقوق محفوظة. موقع Quick Pay Now (الدفع السريع الآن).
-            </div>
-        </div>
-    </footer>
-
-    <!-- Sticky Footer -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] z-40 md:hidden">
-        <a href="https://url.hk/i/en/42ngi" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-primary-600 text-white font-bold text-lg py-3 rounded-xl shadow-lg hover:bg-primary-700 transition active:scale-95">
-            <span>ادفع بالدولار الآن</span>
-            <svg class="mr-2 w-5 h-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-    </div>
-
-    <!-- Application Script -->
     <script src="script.js"></script>
 </body>
 </html>

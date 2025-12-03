@@ -59,39 +59,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Blog Data (Egyptian Arabic Content) ---
+  // --- Blog Data (Service Based Content) ---
   const blogPosts = [
     {
       id: 4,
-      title: "ازاي ادفع بالدولار في مصر (أحدث طريقة 2026)",
-      date: "2026-01-10",
+      title: "ازاي تدفع إعلانات فيسبوك عن طريق فودافون كاش؟",
+      date: "2026-01-15",
       url: "article-how-to-pay.html",
-      image: "https://placehold.co/800x450/b91c1c/ffffff?text=%D8%A7%D8%B2%D8%A7%D9%8A+%D8%A7%D8%AF%D9%81%D8%B9+%D8%A8%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A7%D8%B1+%D9%81%D9%8A+%D9%85%D8%B5%D8%B1&font=roboto",
-      summary: "الدليل الشامل والنهائي للدفع بالدولار من داخل مصر وحل جميع مشاكل وقف البطاقات البنكية باستخدام تطبيق واحد."
+      image: "https://placehold.co/800x450/b91c1c/ffffff?text=%D8%AF%D9%81%D8%B9+%D8%A7%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA+%D9%81%D9%8A%D8%B3%D8%A8%D9%88%D9%83&font=roboto",
+      summary: "لو الفيزا بتاعتك واقفة ومش عارف تدفع مديونية الإعلانات، احنا هندفعلك المديونية أو نشحنلك الحساب الاعلاني في دقايق."
     },
     {
       id: 1,
-      title: "ازاي تعمل حساب على RedotPay وتفعله في 5 دقايق (خطوة بخطوة)",
-      date: "2025-11-15",
+      title: "طريقة طلب خدمة الدفع خطوة بخطوة",
+      date: "2026-01-10",
       url: "article-registration.html",
-      image: "https://placehold.co/800x450/b91c1c/ffffff?text=%D8%A7%D8%B2%D8%A7%D9%8A+%D8%A7%D8%AF%D9%81%D8%B9+%D8%A8%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A7%D8%B1+%D9%81%D9%8A+%D9%85%D8%B5%D8%B1&font=roboto",
-      summary: "شرح بالصور والخطوات ازاي تسجل في البرنامج وتوثق حسابك عشان تاخد الـ 5 دولار الهدية وتبدأ تشتري من برة مصر."
+      image: "https://placehold.co/800x450/16a34a/ffffff?text=%D8%AE%D8%B7%D9%88%D8%A7%D8%AA+%D8%B7%D9%84%D8%A8+%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9&font=roboto",
+      summary: "شرح بسيط ازاي تتواصل معانا واتساب، تحسب التكلفة، وتحول المبلغ فودافون كاش عشان ننفذ طلبك."
     },
     {
       id: 2,
-      title: "شرح طريقة شحن RedotPay بفودافون كاش (من غير وسيط)",
-      date: "2025-11-20",
-      url: "article-charging.html",
-      image: "https://placehold.co/800x450/1e293b/ffffff?text=%D8%B4%D8%AD%D9%86+%D8%A8%D9%81%D9%88%D8%AF%D8%A7%D9%81%D9%88%D9%86+%D9%83%D8%A7%D8%B4&font=roboto",
-      summary: "الدليل الكامل لشحن حسابك بالدولار الرقمي (USDT) باستخدام محفظتك المحلية سواء فودافون كاش أو إنستا باي."
+      title: "ليه تختار وسيط بدل ما تطلع فيزا دولارية؟",
+      date: "2026-01-05",
+      url: "article-comparison.html",
+      image: "https://placehold.co/800x450/047857/ffffff?text=%D9%88%D8%B3%D9%8A%D8%B7+%D9%88%D9%84%D8%A7+%D9%81%D9%8A%D8%B2%D8%A7%D8%9F&font=roboto",
+      summary: "مقارنة بين تكلفة وعمولة الخدمة بتاعتنا (7%) وبين مصاريف البنك وتدبير العملة والمشاكل اللي ممكن تقابلك."
     },
     {
       id: 3,
-      title: "ليه RedotPay أحسن من كروت البنوك اللي واقفة؟",
-      date: "2025-12-05",
-      url: "article-comparison.html",
-      image: "https://placehold.co/800x450/047857/ffffff?text=%D9%85%D9%82%D8%A7%D8%B1%D9%86%D8%A9+%D8%A7%D9%84%D9%83%D8%B1%D9%88%D8%AA&font=roboto",
-      summary: "مقارنة صريحة بين فيزا RedotPay وكروت الدفع الدولية بتاعة البنوك، وليه دي الاختيار الأفضل دلوقتي."
+      title: "ازاي بنحسب التكلفة والعمولة؟ (مثال عملي)",
+      date: "2026-01-01",
+      url: "article-charging.html",
+      image: "https://placehold.co/800x450/1e293b/ffffff?text=%D8%AD%D8%B3%D8%A7%D8%A8+%D8%A7%D9%84%D8%AA%D9%83%D9%84%D9%81%D8%A9&font=roboto",
+      summary: "عشان تبقى عارف هتدفع كام بالظبط، شرحنا طريقة حساب سعر الدولار وإضافة الـ 7% عمولة الخدمة."
     }
   ];
 
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="p-6 flex-1 flex flex-col">
                 <div class="flex items-center text-sm text-primary-600 font-medium mb-3">
-                    <span class="bg-primary-50 px-2 py-1 rounded-md">شروحات</span>
+                    <span class="bg-primary-50 px-2 py-1 rounded-md">خدماتنا</span>
                     <span class="mx-2 text-gray-300">|</span>
                     <span class="text-gray-500">${post.date}</span>
                 </div>
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </h3>
                 <p class="text-gray-600 mb-6 flex-1 line-clamp-3 leading-relaxed">${post.summary}</p>
                 <a href="${post.url}" class="mt-auto w-full flex items-center justify-center px-4 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg hover:bg-primary-600 hover:text-white hover:border-primary-600 transition font-bold group">
-                    اقرأ المزيد
+                    اقرأ التفاصيل
                     <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 </a>
             </div>
